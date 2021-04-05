@@ -1,7 +1,7 @@
 #ifndef SEZNAMZASTAVEK_H
 #define SEZNAMZASTAVEK_H
 
-#include "struktury/pasmo.h"
+#include "pasmo.h"
 #include <QMainWindow>
 #include <QObject>
 
