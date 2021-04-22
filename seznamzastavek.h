@@ -31,7 +31,7 @@ public:
     bool prestupLetadlo=0;
     bool prestupPrivoz=0;
     bool naZnameni=0;
-
+    QString additionalTextMessage="";
 
     int cisloOis=0;
     int nacestna=0;
