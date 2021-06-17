@@ -11,6 +11,8 @@ public:
     int c=0;
     int lc=0;
     QString n="";
+    QString LineNumber="";
+    QString LineName="";
 };
 
 #endif // LINKA_H

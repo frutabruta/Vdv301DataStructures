@@ -6,7 +6,7 @@
 #include <QObject>
 
 
-class SeznamZastavek
+class Zastavka
 {
 public:
     int StopIndex=0;
@@ -14,8 +14,8 @@ public:
     QString ids="";
     QString StopName="";
     QString LineName="";
-    QString LineNumber="";
-    QString DestinationName="";
+   // QString LineNumber="";
+  //  QString DestinationName="";
     int DestinationCis=0;
     QString DepartureTime="";
     QString NameFront="";
@@ -35,8 +35,12 @@ public:
 
     int cisloOis=0;
     int nacestna=0;
-    SeznamZastavek();
+    Zastavka();
     QVector<Pasmo> seznamPasem;
+    Zastavka *cil=nullptr;
+
+
+
 
 };
 
