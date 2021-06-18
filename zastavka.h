@@ -13,7 +13,7 @@ public:
     int cisloCis=0;
     QString ids="";
     QString StopName="";
-    QString LineName="";
+   // QString LineName="";
    // QString LineNumber="";
   //  QString DestinationName="";
     int DestinationCis=0;
@@ -37,7 +37,7 @@ public:
     int nacestna=0;
     Zastavka();
     QVector<Pasmo> seznamPasem;
-    Zastavka *cil=nullptr;
+   // Zastavka *cil=nullptr;
 
 
 
