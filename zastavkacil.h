@@ -11,6 +11,7 @@ public:
     Zastavka zastavka;
     Zastavka cil;
     Linka linka;
+    QVector<Zastavka> nacestneZastavky;
 };
 
 #endif // ZASTAVKACIL_H
