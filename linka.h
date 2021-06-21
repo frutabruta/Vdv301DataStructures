@@ -13,6 +13,7 @@ public:
     QString n="";
     QString LineNumber="";
     QString LineName="";
+    QString typLinky="";
 };
 
 #endif // LINKA_H
