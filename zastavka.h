@@ -19,6 +19,7 @@ public:
     int DestinationCis=0;
     QString DepartureTime="";
     QString NameFront="";
+    QString NameFront2="";
     QString NameSide="";
     QString NameLcd="";
     QString NameRear="";
