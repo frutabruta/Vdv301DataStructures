@@ -14,6 +14,12 @@ public:
     QString LineNumber="";
     QString LineName="";
     QString typLinky="";
+    bool isDiversion=false;
+    bool isNight=false;
+    bool isReplacement=false;
+    bool isSpecial=false;
+    bool isWheelchair=false;
+    bool isSchool=false; //ignorování zastávek na znamení
 };
 
 #endif // LINKA_H
