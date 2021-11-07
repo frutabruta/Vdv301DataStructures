@@ -20,6 +20,7 @@ public:
     bool VehicleStopRequested=false;
     bool prestupy=false;
     int indexAktZastavky;
+    int indexTripu=0;;
     int pocetZastavek;
     Linka aktlinka;
     Obeh aktObeh;

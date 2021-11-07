@@ -11,6 +11,7 @@ public:
     Linka linka;
     int cislo=0;
     int cisloRopid=0;
+    bool navazujici=false;
 };
 
 #endif // SPOJ_H
