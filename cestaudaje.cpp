@@ -18,7 +18,7 @@ int CestaUdaje::vymaz()
     VehicleStopRequested=false;
     indexAktZastavky=0;
     pocetZastavek=0;
-    aktlinka=0;
-    aktspoj=0;
+    aktlinka.LineNumber="";
+    //aktspoj=0;
    return 1;
 }

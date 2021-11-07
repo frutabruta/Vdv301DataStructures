@@ -4,7 +4,8 @@
 #include <QMainWindow>
 #include <QObject>
 #include <QWidget>
-
+#include "linka.h"
+#include "obeh.h"
 class CestaUdaje
 {
 
@@ -20,8 +21,10 @@ public:
     bool prestupy=false;
     int indexAktZastavky;
     int pocetZastavek;
-    int aktlinka;
-    int aktspoj;
+    Linka aktlinka;
+    Obeh aktObeh;
+    //int aktlinka;
+    Spoj aktspoj;
     int cisloVozu;
     int otevreneDvere;
     int vystupniStrana;
