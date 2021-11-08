@@ -9,7 +9,8 @@ public:
     Trip();
      QVector<ZastavkaCil>  globalniSeznamZastavek ;
      Spoj spoj;
-     Spoj navazSpoj;
+     bool navaz;
+     //Spoj navazSpoj;
 
 };
 
