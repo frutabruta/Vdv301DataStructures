@@ -4,6 +4,7 @@
 #include <QObject>
 #include <QWidget>
 #include "linka.h"
+#include "zastavkacil.h"
 class Spoj
 {
 public:
@@ -11,6 +12,7 @@ public:
     Linka linka;
     int cislo=0;
     int cisloRopid=0;
+    QVector<ZastavkaCil>  globalniSeznamZastavek ;
     bool navazujici=false;
 };
 
