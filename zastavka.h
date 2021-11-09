@@ -32,6 +32,7 @@ public:
     bool prestupLetadlo=0;
     bool prestupPrivoz=0;
     bool naZnameni=0;
+    bool zsol=0; //prujezdna konecna
     QString additionalTextMessage="";
 
     int cisloOis=0;
