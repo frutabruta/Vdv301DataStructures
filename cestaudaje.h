@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QObject>
 #include <QWidget>
+#include <QDate>
 #include "linka.h"
 #include "obeh.h"
 class CestaUdaje
@@ -30,6 +31,7 @@ public:
     int otevreneDvere;
     int vystupniStrana;
     int vymaz();
+    QDate pracovniDatum;
 signals:
 
 public slots:
