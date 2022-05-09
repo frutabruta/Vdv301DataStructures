@@ -22,3 +22,18 @@ int CestaUdaje::vymaz()
     //aktspoj=0;
    return 1;
 }
+
+int CestaUdaje::pocetZastavekAktualnihoSpoje()
+{
+    int vysledek=0;
+    vysledek=this->aktObeh.seznamSpoju.at(this->indexSpojeNaObehu).globalniSeznamZastavek.count();
+
+    return vysledek;
+}
+
+Spoj CestaUdaje::aktualniSpojNaObehu()
+{
+  return this->aktObeh.seznamSpoju.at(this->indexSpojeNaObehu);
+}
+
+

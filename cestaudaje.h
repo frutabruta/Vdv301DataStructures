@@ -33,6 +33,8 @@ public:
     bool zobrazZmenuPasma=false;
     int vymaz();
     QDate pracovniDatum;
+    int pocetZastavekAktualnihoSpoje();
+    Spoj aktualniSpojNaObehu();
 signals:
 
 public slots:
