@@ -9,6 +9,8 @@ public:
     Pasmo();
     QString nazev="";
     QString system="";
+    static bool podminkaHlasitZmenuPasma(QVector<Pasmo> seznamPasem1, QVector<Pasmo> seznamPasem2);
+    static QVector<Pasmo> vratPidPasma(QVector<Pasmo> vstup, QString hledanePasmo);
 };
 
 #endif // PASMO_H

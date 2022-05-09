@@ -30,6 +30,7 @@ public:
     int cisloVozu;
     int otevreneDvere;
     int vystupniStrana;
+    bool zobrazZmenuPasma=false;
     int vymaz();
     QDate pracovniDatum;
 signals:
