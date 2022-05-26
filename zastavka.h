@@ -39,6 +39,7 @@ public:
     int nacestna=0;
     Zastavka();
     QVector<Pasmo> seznamPasem;
+    QVector<QString> seznamPiktogramu;
    // Zastavka *cil=nullptr;
 
 
