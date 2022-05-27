@@ -27,9 +27,9 @@ public:
     Obeh aktObeh;
     //int aktlinka;
     Spoj aktspoj;
-    int cisloVozu;
-    int otevreneDvere;
-    int vystupniStrana;
+    int cisloVozu=1234;
+    int otevreneDvere=0;
+    int vystupniStrana=0;
     bool zobrazZmenuPasma=false;
     int vymaz();
     QDate pracovniDatum;

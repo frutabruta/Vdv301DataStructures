@@ -14,6 +14,7 @@ public:
     int cisloRopid=0;
     QVector<ZastavkaCil>  globalniSeznamZastavek ;
     bool navazujici=false;
+    void vymaz();
 };
 
 #endif // SPOJ_H

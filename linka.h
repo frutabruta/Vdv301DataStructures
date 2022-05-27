@@ -20,6 +20,7 @@ public:
     bool isSpecial=false;
     bool isWheelchair=false;
     bool isSchool=false; //ignorování zastávek na znamení
+    void vymaz();
 };
 
 #endif // LINKA_H

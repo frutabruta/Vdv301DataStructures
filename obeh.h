@@ -11,7 +11,11 @@ public:
     int p=0;
     QVector<Spoj> seznamSpoju;
 
+    void vymaz();
 };
+
+
+
 
 
 
