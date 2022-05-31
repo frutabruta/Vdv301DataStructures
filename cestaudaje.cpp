@@ -14,7 +14,7 @@ int CestaUdaje::vymaz()
 {
     qDebug()<<"CestaUdaje::vymaz()";
 
-    prestupy=false;
+    //prestupy=false;
 
     indexSpojeNaObehu=0;
 
