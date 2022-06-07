@@ -1,6 +1,7 @@
 #ifndef PRESTUP_H
 #define PRESTUP_H
 #include <QObject>
+#include "linka.h"
 
 
 //VDV301 prestupy
@@ -12,9 +13,10 @@ public:
 
     QString mainMode="";
     QString subMode="";
-    QString property="";
+    QString connectionProperty="";
     QString connectionType="";
-    QString lineName="";
+    QString destination="";
+    Linka line;
     QString destinationName="";
     QString departureTime="";
     QString platform="";

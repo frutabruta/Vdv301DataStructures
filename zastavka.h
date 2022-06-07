@@ -4,6 +4,7 @@
 #include "pasmo.h"
 #include <QMainWindow>
 #include <QObject>
+#include "prestup.h"
 
 
 class Zastavka
@@ -40,6 +41,7 @@ public:
     Zastavka();
     QVector<Pasmo> seznamPasem;
     QVector<QString> seznamPiktogramu;
+    QVector<Prestup> seznamPrestupu;
    // Zastavka *cil=nullptr;
 
 
