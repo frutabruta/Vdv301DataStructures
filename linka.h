@@ -13,6 +13,7 @@ public:
     QString n="";
     QString LineNumber="";
     QString LineName="";
+    int kli=0;
     QString typLinky="";
     bool isDiversion=false;
     bool isNight=false;

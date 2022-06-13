@@ -10,6 +10,7 @@ void Linka::vymaz()
 {
     c=0;
     lc=0;
+    kli=0;
     n="";
     LineNumber="";
     LineName="";
