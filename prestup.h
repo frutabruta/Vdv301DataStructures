@@ -18,7 +18,8 @@ public:
     QString destination="";
     Linka line;
     QString destinationName="";
-    QString departureTime="";
+    QString expectedDepartureTime="";
+    QString scheduledDepartureTime="";
     QString platform="";
 };
 

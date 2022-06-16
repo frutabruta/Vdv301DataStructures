@@ -6,5 +6,6 @@ mainMode="";
 subMode="";
 connectionType="";
 destinationName="";
-departureTime="";
+expectedDepartureTime="";
+scheduledDepartureTime="";
 }
