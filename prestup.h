@@ -1,6 +1,7 @@
 #ifndef PRESTUP_H
 #define PRESTUP_H
 #include <QObject>
+#include <QDateTime>
 #include "linka.h"
 
 
@@ -18,9 +19,10 @@ public:
     QString destination="";
     Linka line;
     QString destinationName="";
-    QString expectedDepartureTime="";
-    QString scheduledDepartureTime="";
+    QDateTime expectedDepartureTime;
+    QDateTime scheduledDepartureTime;
     QString platform="";
+    int minutDoOdjezdu(QDateTime aktCas);
 };
 
 #endif // PRESTUP_H
