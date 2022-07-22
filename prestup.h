@@ -23,6 +23,8 @@ public:
     QDateTime scheduledDepartureTime;
     QString platform="";
     int minutDoOdjezdu(QDateTime aktCas);
+    QString expectedDepartureTimeQString();
+    QString scheduledDepartureTimeQString();
 };
 
 #endif // PRESTUP_H

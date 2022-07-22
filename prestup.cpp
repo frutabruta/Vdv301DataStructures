@@ -21,3 +21,13 @@ int Prestup::minutDoOdjezdu(QDateTime aktCas)
 
 return vysledek;
 }
+
+QString Prestup::expectedDepartureTimeQString()
+{
+return expectedDepartureTime.toString(Qt::ISODate);
+}
+
+QString Prestup::scheduledDepartureTimeQString()
+{
+return scheduledDepartureTime.toString(Qt::ISODate);
+}
