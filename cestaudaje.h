@@ -7,6 +7,8 @@
 #include <QDate>
 #include "linka.h"
 #include "obeh.h"
+#include "specialnihlaseni.h"
+
 class CestaUdaje
 {
 
@@ -35,6 +37,11 @@ public:
     QDate pracovniDatum;
     int pocetZastavekAktualnihoSpoje();
     Spoj aktualniSpojNaObehu();
+    SpecialniHlaseni aktivniSpecialniHlaseni;
+    bool jeSpecialniHlaseni=false;
+
+
+
 signals:
 
 public slots:
