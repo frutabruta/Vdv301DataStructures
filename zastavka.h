@@ -12,11 +12,10 @@ class Zastavka
 public:
     int StopIndex=0;
     int cisloCis=0;
+    int cisloU=0;
+    int cisloZ=0;
     QString ids="";
     QString StopName="";
-   // QString LineName="";
-   // QString LineNumber="";
-  //  QString DestinationName="";
     int DestinationCis=0;
     QString DepartureTime="";
     QString NameFront="";
