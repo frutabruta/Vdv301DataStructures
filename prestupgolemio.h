@@ -1,6 +1,7 @@
 #ifndef PRESTUPGOLEMIO_H
 #define PRESTUPGOLEMIO_H
 #include <QDateTime>
+#include "prestup.h"
 
 class PrestupGolemio
 {
@@ -30,6 +31,7 @@ public:
 
 
 
+    Prestup toPrestup();
 };
 
 #endif // PRESTUPGOLEMIO_H

@@ -25,6 +25,9 @@ public:
     int minutDoOdjezdu(QDateTime aktCas);
     QString expectedDepartureTimeQString();
     QString scheduledDepartureTimeQString();
+
+    static  bool srovnejPrestupy(const Prestup &d1, const Prestup &d2);
+    static  QVector<Prestup> seradPrestupyExpectedDeparture(QVector<Prestup> vstup);
 };
 
 #endif // PRESTUP_H
