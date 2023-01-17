@@ -14,3 +14,11 @@ void Spoj::vymaz()
     globalniSeznamZastavek.clear();
     navazujici=false;
 }
+
+
+bool Spoj::operator==(const Spoj &node) const
+{
+return cisloRopid == node.cisloRopid&&
+linka.c== node.linka.c;
+}
+

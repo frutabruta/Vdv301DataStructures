@@ -15,6 +15,8 @@ public:
     QVector<ZastavkaCil>  globalniSeznamZastavek ;
     bool navazujici=false;
     void vymaz();
+
+    bool operator ==(const Spoj &node) const;
 };
 
 #endif // SPOJ_H
