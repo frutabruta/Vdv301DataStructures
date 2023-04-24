@@ -9,7 +9,10 @@
 
 class Zastavka
 {
-public:
+public:    
+    Zastavka();
+
+
     int StopIndex=0;
     int cisloCis=0;
     int cisloU=0;
@@ -37,15 +40,17 @@ public:
 
     int cisloOis=0;
     int nacestna=0;
-    Zastavka();
+
+    QString lng="";
+    QString lat="";
+
+
     QVector<Pasmo> seznamPasem;
     QVector<QString> seznamPiktogramu;
     QVector<Prestup> seznamPrestupu;
 
     QVector<QString> seznamPoznamek;
    // Zastavka *cil=nullptr;
-
-
 
 
 };
