@@ -41,8 +41,8 @@ public:
     int cisloOis=0;
     int nacestna=0;
 
-    QString lng="";
-    QString lat="";
+    double lng=0.0;
+   double lat=0.0;
 
 
     QVector<Pasmo> seznamPasem;
