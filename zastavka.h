@@ -12,7 +12,6 @@ class Zastavka
 public:    
     Zastavka();
 
-
     int StopIndex=0;
     int cisloCis=0;
     int cisloU=0;
@@ -41,16 +40,16 @@ public:
     int cisloOis=0;
     int nacestna=0;
 
-    double lng=0.0;
-   double lat=0.0;
-
+    double lng=0.0; //GPS souradnice
+    double lat=0.0; //GPS souradnice
+    int radius=0; //polomer vyhlaseni zastavky
 
     QVector<Pasmo> seznamPasem;
     QVector<QString> seznamPiktogramu;
     QVector<Prestup> seznamPrestupu;
 
     QVector<QString> seznamPoznamek;
-   // Zastavka *cil=nullptr;
+    // Zastavka *cil=nullptr;
 
 
 };
