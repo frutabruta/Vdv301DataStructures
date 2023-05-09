@@ -48,7 +48,15 @@ int CestaUdaje::pocetZastavekAktualnihoSpoje()
 
 Spoj CestaUdaje::aktualniSpojNaObehu()
 {
-  return this->aktObeh.seznamSpoju.at(this->indexSpojeNaObehu);
+    qDebug()<<Q_FUNC_INFO;
+    Spoj prazdnySpoj;
+
+    if((this->aktObeh.seznamSpoju.isEmpty())||(this->indexSpojeNaObehu>this->aktObeh.seznamSpoju.length()))
+    {
+        return prazdnySpoj;
+    }
+
+    return this->aktObeh.seznamSpoju.at(this->indexSpojeNaObehu);
 }
 
 

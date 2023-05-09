@@ -40,6 +40,8 @@ public:
     int cisloOis=0;
     int nacestna=0;
 
+    QString nastupiste="";
+
     double lng=0.0; //GPS souradnice
     double lat=0.0; //GPS souradnice
     int radius=0; //polomer vyhlaseni zastavky
@@ -52,6 +54,10 @@ public:
     // Zastavka *cil=nullptr;
 
 
+
+    QTime odjezdQTime();
+
+    static QTime vytvorCasHodinyMinuty(QString vstup);
 };
 
 
