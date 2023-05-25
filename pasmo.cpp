@@ -62,3 +62,22 @@ bool Pasmo::podminkaHlasitZmenuPasma(QVector<Pasmo> seznamPasem1, QVector<Pasmo>
     return vysledek;
 }
 
+
+
+
+QString Pasmo::pasmaDoStringu(QVector<Pasmo> pasma, QString delimiter)
+{
+    QString vysledek="";
+
+    if (pasma.count()==0)
+    {
+        return "";
+    }
+    for(int i=0; i<pasma.count()-1;i++)
+    {
+        vysledek+=pasma.at(i).nazev;
+        vysledek+=delimiter;
+    }
+    vysledek+=pasma.last().nazev;
+    return vysledek;
+}
