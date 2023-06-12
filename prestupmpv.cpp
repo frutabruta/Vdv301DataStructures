@@ -8,7 +8,7 @@ PrestupMPV::PrestupMPV()
 
 void PrestupMPV::setLin(int pLin)
 {
-    this->lin= pLin;
+    this->lin=QString::number(pLin);
 }
 
 
