@@ -55,7 +55,7 @@ Prestup PrestupGolemio::toPrestup()
         vystup.mainMode="RailSubmode";
 
 
-        vystup.subMode="";
+        vystup.subMode="regionalRail";
 
         break;
     case 3: //Bus. Used for short- and long-distance bus routes.
