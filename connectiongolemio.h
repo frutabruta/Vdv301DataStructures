@@ -1,12 +1,17 @@
-#ifndef PRESTUPGOLEMIO_H
-#define PRESTUPGOLEMIO_H
+#ifndef CONNECTIONGOLEMIO_H
+#define CONNECTIONGOLEMIO_H
 #include <QDateTime>
-#include "prestup.h"
+#include <QDebug>
 
-class PrestupGolemio
+#include "connection.h"
+
+//this class stores connections obtained from public Golemio API: https://api.golemio.cz/v2/pid/docs/openapi/
+
+
+class ConnectionGolemio
 {
 public:
-    PrestupGolemio();
+    ConnectionGolemio();
 
     QDateTime arrivalTimestampPredicted;
     QDateTime arrivalTimestampScheduled;
@@ -31,7 +36,7 @@ public:
 
 
 
-    Prestup toPrestup();
+    Connection toTransfer();
 };
 
-#endif // PRESTUPGOLEMIO_H
+#endif // CONNECTIONGOLEMIO_H

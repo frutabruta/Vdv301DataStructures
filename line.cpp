@@ -1,20 +1,20 @@
-#include "linka.h"
+#include "line.h"
 
-Linka::Linka()
+Line::Line()
 {
 
 }
 
 
-void Linka::vymaz()
+void Line::reset()
 {
     c=0;
     lc=0;
     kli=0;
-    n="";
-    LineNumber="";
-    LineName="";
-    typLinky="";
+    n="";  //line description (from ROPID XML)
+    lineNumber="";
+    lineName="";
+    lineType="";
     isDiversion=false;
     isNight=false;
     isReplacement=false;

@@ -1,15 +1,19 @@
-#ifndef PRESTUP_H
-#define PRESTUP_H
+#ifndef CONNECTION_H
+#define CONNECTION_H
 #include <QObject>
 #include <QDateTime>
-#include "linka.h"
+#include <QDebug>
+
+#include "line.h"
+//#include "transfergolemio.h"
+
 
 
 //VDV301 prestupy
-class Prestup
+class Connection
 {
 public:
-    Prestup();
+    Connection();
 
 
     QString mainMode="";
@@ -17,17 +21,17 @@ public:
     QString connectionProperty="";
     QString connectionType="";
     QString destination="";
-    Linka line;
+    Line line;
     QString destinationName="";
     QDateTime expectedDepartureTime;
     QDateTime scheduledDepartureTime;
     QString platform="";
-    int minutDoOdjezdu(QDateTime aktCas);
+    int getMinutesToDeparture(QDateTime aktCas);
     QString expectedDepartureTimeQString();
     QString scheduledDepartureTimeQString();
 
-    static  bool srovnejPrestupy(const Prestup &d1, const Prestup &d2);
-    static  QVector<Prestup> seradPrestupyExpectedDeparture(QVector<Prestup> vstup);
+    static  bool compareConnections(const Connection &d1, const Connection &d2);
+    static  QVector<Connection> orderConnectionsByExpectedDeparture(QVector<Connection> vstup);
 };
 
-#endif // PRESTUP_H
+#endif // CONNECTION_H

@@ -1,21 +1,21 @@
-#include "prestupmpv.h"
+#include "connectionmpv.h"
 
 
-PrestupMPV::PrestupMPV()
+ConnectionMPV::ConnectionMPV()
 {
 
 }
 
-void PrestupMPV::setLin(int pLin)
+void ConnectionMPV::setLin(int pLin)
 {
     this->lin=QString::number(pLin);
 }
 
 
-Prestup PrestupMPV::toPrestup()
+Connection ConnectionMPV::toConnection()
 {
 
-    Prestup vystup;
+    Connection output;
     /*
     void setLin(int pLin);
     QString lin="";
@@ -32,33 +32,33 @@ Prestup PrestupMPV::toPrestup()
     QString connectionProperty="";
     QString connectionType="";
     QString destination="";
-    Linka line;*/
+    Lineline;*/
 
-    vystup.line.LineName=this->alias;
-    vystup.destinationName=this->smer;
-    vystup.platform=this->stan;
-    vystup.expectedDepartureTime=posunTimeStampZpozdeni(this->odj,  this->zpoz );
-    vystup.scheduledDepartureTime= this->odj;
-    ddDoVehicleMode(this->dd,vystup.mainMode,vystup.subMode,vystup.line);
+    output.line.lineName=this->alias;
+    output.destinationName=this->smer;
+    output.platform=this->stan;
+    output.expectedDepartureTime=shiftTimestampByDelay(this->odj,  this->zpoz );
+    output.scheduledDepartureTime= this->odj;
+    ddDoVehicleMode(this->dd,output.mainMode,output.subMode,output.line);
 
-    return vystup;
+    return output;
 
 }
 
 
-QDateTime PrestupMPV::posunTimeStampZpozdeni(QDateTime vstupniTimestamp, int zpozdeni)
+QDateTime ConnectionMPV::shiftTimestampByDelay(QDateTime vstupniTimestamp, int zpozdeni)
 {
 
     return vstupniTimestamp.addSecs(zpozdeni*60);
 
 }
 
-QDateTime  PrestupMPV::qStringDoQDateTime(QString vstup)
+QDateTime  ConnectionMPV::qStringDoQDateTime(QString vstup)
 {
     return QDateTime::fromString(vstup,Qt::ISODate);
 }
 
-QString PrestupMPV::qDateTimeToString(QDateTime vstup)
+QString ConnectionMPV::qDateTimeToString(QDateTime vstup)
 {
      return vstup.toString(Qt::ISODate);
 }
@@ -68,7 +68,7 @@ QString PrestupMPV::qDateTimeToString(QDateTime vstup)
 
 
 
-void PrestupMPV::ddDoVehicleMode(int dd, QString &mainMode, QString &subMode, Linka &linka)
+void ConnectionMPV::ddDoVehicleMode(int dd, QString &mainMode, QString &subMode, Line &linka)
 {
     qDebug()<<"PrestupMPV::ddDoVehicleMode "<<dd;
 
@@ -88,60 +88,60 @@ void PrestupMPV::ddDoVehicleMode(int dd, QString &mainMode, QString &subMode, Li
         subMode="metro";
 
         break;
-    case 2: //Denní tramvaj
+    case 2: //Denní tramvaj (day tram)
         mainMode="TramSubmode";
         subMode="localTram";
 
         break;
 
-    case 3: //Denní městská autobusová linka
+    case 3: //Denní městská autobusová linka (day city bus)
         mainMode="BusSubmode";
         subMode="localBus";
 
         break;
-    case 4: //Denní příměstská nebo regionální linka
+    case 4: //Denní příměstská nebo regionální linka (day regional bus)
         mainMode="BusSubmode";
         subMode="regionalBus";
 
         break;
-    case 5: //Noční městská autobusová linka
+    case 5: //Noční městská autobusová linka (night city bus)
         mainMode="BusSubmode";
         subMode="localBus";
         linka.isNight=true;
 
         break;
-    case 6: //Noční tramvaj
+    case 6: //Noční tramvaj (night tram)
         mainMode="TramSubmode";
         subMode="localTram";
         linka.isNight=true;
 
         break;
-    case 7: //Linka náhradní dopravy, městský autobus
+    case 7: //Linka náhradní dopravy, městský autobus (replacement bus)
         mainMode="BusSubmode";
         subMode="localBus";
         linka.isReplacement=true;
 
         break;
 
-    case 8: //Lanovka
+    case 8: //Lanovka (funicular)
         mainMode="FunicularSubmode";
         subMode="funicular";
 
         break;
-    case 9: //Školní linka
+    case 9: //Školní linka (school bus)
         mainMode="BusSubmode";
         subMode="schoolBus";
         linka.isSchool=true;
 
         break;
 
-    case 10: //Invalidní
+    case 10: //Invalidní (bus line for people with reduced mobility)
         mainMode="BusSubmode";
         subMode="specialNeedsBus";
         linka.isWheelchair=true;
 
         break;
-    case 11: //Smluvni
+    case 11: //Smluvni (contract line)
         mainMode="BusSubmode";
         subMode="localBus";
         linka.isSpecial=true;
@@ -149,42 +149,42 @@ void PrestupMPV::ddDoVehicleMode(int dd, QString &mainMode, QString &subMode, Li
 
 
         break;
-    case 12: //Přívoz
+    case 12: //Přívoz (ferry)
         mainMode="WaterSubmode";
         subMode="localPassengerFerry";
 
         break;
-    case 13: //Vlaky PID – linky S nebo R
+    case 13: //Vlaky PID – linky S nebo R (PID trains)
         mainMode="RailSubmode";
         subMode="regionalRail";
 
         break;
-    case 14: //Linka náhradní dopravy, NAD za vlak
+    case 14: //Linka náhradní dopravy, NAD za vlak (bus replacement for bus)
         mainMode="BusSubmode";
         subMode="railReplacementBus";
         linka.isReplacement=true;
 
         break;
-    case 15: //Linka náhradní dopravy, Tram
+    case 15: //Linka náhradní dopravy, Tram (replacement tram)
         mainMode="TramSubmode";
         subMode="localTram";
         linka.isReplacement=true;
 
         break;
 
-    case 16: //Noční příměstská nebo regionální linka
+    case 16: //Noční příměstská nebo regionální linka (night regional bus)
         mainMode="BusSubmode";
         subMode="regionalBus";
         linka.isNight=true;
 
         break;
 
-    case 17: //Linka mimo systém PID (3 znaky)
+    case 17: //Linka mimo systém PID (3 znaky) (bus line not included in PID system)
         mainMode="BusSubmode";
         subMode="undefined";
 
         break;
-    case 18: //Denní trolejbusová linka
+    case 18: //Denní trolejbusová linka (day trolleybus)
         mainMode="TrolleybusSubmode";
         subMode="localTrolleybus";
 
@@ -210,7 +210,7 @@ void PrestupMPV::ddDoVehicleMode(int dd, QString &mainMode, QString &subMode, Li
 
 
 
-bool PrestupMPV::srovnejPrestupy(const PrestupMPV &d1, const PrestupMPV &d2)
+bool ConnectionMPV::compareConnectionMPV(const ConnectionMPV &d1, const ConnectionMPV &d2)
 {
   //  return d1.smer < d2.smer; // sort by namefile
 
@@ -218,7 +218,7 @@ bool PrestupMPV::srovnejPrestupy(const PrestupMPV &d1, const PrestupMPV &d2)
 
 }
 
-QString PrestupMPV::vypisPrestup()
+QString ConnectionMPV::dumpConnection()
 {
     QString vystup;
     vystup=vystup+"prestup: "+this->alias+" "+this->smer+" "+this->odj.toString()+" "+QString::number(this->zpoz)+" "+this->stan;
@@ -226,23 +226,23 @@ QString PrestupMPV::vypisPrestup()
 }
 
 
-QVector<PrestupMPV> PrestupMPV::seradPrestupyExpectedDeparture(QVector<PrestupMPV> vstup)
+QVector<ConnectionMPV> ConnectionMPV::orderConnectionsByExpectedDeparture(QVector<ConnectionMPV> vstup)
 {
-    qDebug()<<"PrestupMPV::seradPrestupyExpectedDeparture";
+    qDebug()<<Q_FUNC_INFO;
 
 
-    foreach(PrestupMPV aktPrestup,vstup)
+    foreach(ConnectionMPV aktPrestup,vstup)
     {
-        qDebug()<<aktPrestup.vypisPrestup();
+        qDebug()<<aktPrestup.dumpConnection();
     }
 
     qDebug()<<"serazeno:";
 
-   std::sort(vstup.begin(),vstup.end(),PrestupMPV::srovnejPrestupy );
+   std::sort(vstup.begin(),vstup.end(),ConnectionMPV::compareConnectionMPV );
 
-   foreach(PrestupMPV aktPrestup,vstup)
+   foreach(ConnectionMPV aktPrestup,vstup)
    {
-       qDebug()<<aktPrestup.vypisPrestup();
+       qDebug()<<aktPrestup.dumpConnection();
    }
 
 

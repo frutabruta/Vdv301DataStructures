@@ -1,114 +1,111 @@
-#include "prestupgolemio.h"
-#include <QDebug>
-//#include "prestup.h"
+#include "connectiongolemio.h"
 
-PrestupGolemio::PrestupGolemio()
+ConnectionGolemio::ConnectionGolemio()
 {
 
 }
 
-Prestup PrestupGolemio::toPrestup()
+Connection ConnectionGolemio::toTransfer()
 {
     qDebug()<<Q_FUNC_INFO;
-    Prestup vystup;
-    //  vystup.mainMode="";
-    //  vystup.subMode="";
-    vystup.connectionProperty="";
-    vystup.connectionType="";
-    //vystup.destination="";
-    vystup.line.LineName=routeShortName;
-    vystup.destinationName=tripHeadsign;
-    vystup.scheduledDepartureTime=departureTimestampScheduled;
-    vystup.expectedDepartureTime=departureTimestampPredicted;
-    vystup.platform=stopPlatformCode;
+    Connection output;
+
+    output.connectionProperty="";
+    output.connectionType="";
+
+    output.line.lineName=routeShortName;
+    output.destinationName=tripHeadsign;
+    output.scheduledDepartureTime=departureTimestampScheduled;
+    output.expectedDepartureTime=departureTimestampPredicted;
+    output.platform=stopPlatformCode;
 
 
 
     if(tripIsWheelchairAccessible)
     {
-        vystup.connectionProperty="Accessible";
+        output.connectionProperty="Accessible";
     }
 
 
     switch(routeType)
     {
     case 0: //Tram, Streetcar, Light rail. Any light rail or street level system within a metropolitan area.
-        vystup.mainMode="TramSubmode";
+        output.mainMode="TramSubmode";
 
         if(routeIsRegional)
         {
-            vystup.subMode="regionalTram";
+            output.subMode="regionalTram";
         }
         else
         {
-            vystup.subMode="localTram";
+            output.subMode="localTram";
         }
 
 
         break;
     case 1: //Subway, Metro. Any underground rail system within a metropolitan area.
-        vystup.mainMode="MetroSubmode";
-        vystup.subMode="metro";
+        output.mainMode="MetroSubmode";
+        output.subMode="metro";
 
         break;
     case 2: //Rail. Used for intercity or long-distance travel.
-        vystup.mainMode="RailSubmode";
+        output.mainMode="RailSubmode";
 
 
-        vystup.subMode="regionalRail";
+        output.subMode="regionalRail";
 
         break;
     case 3: //Bus. Used for short- and long-distance bus routes.
-        vystup.mainMode="BusSubmode";
+        output.mainMode="BusSubmode";
         if(routeIsRegional)
         {
-            vystup.subMode="regionalBus";
+            output.subMode="regionalBus";
         }
         else
         {
-            vystup.subMode="localBus";
+            output.subMode="localBus";
         }
 
 
         break;
     case 4: //Ferry. Used for short- and long-distance boat service.
-        vystup.mainMode="WaterSubmode";
-        vystup.subMode="localPassengerFerry";
+        output.mainMode="WaterSubmode";
+        output.subMode="localPassengerFerry";
 
         break;
     case 5: //Cable tram. Used for street-level rail cars where the cable runs beneath the vehicle, e.g., cable car in San Francisco.
 
-        vystup.mainMode="";
-        vystup.subMode="";
+        output.mainMode="";
+        output.subMode="";
 
         break;
     case 6: //Aerial lift, suspended cable car (e.g., gondola lift, aerial tramway). Cable transport where cabins, cars, gondolas or open chairs are suspended by means of one or more cables.
-        vystup.mainMode="TelecabinSubmode";
-        vystup.subMode="";
+        output.mainMode="TelecabinSubmode";
+        output.subMode="";
 
         break;
 
 
     case 7: //Funicular. Any rail system designed for steep inclines.
 
-        vystup.mainMode="FunicularSubmode";
-        vystup.subMode="";
+        output.mainMode="FunicularSubmode";
+        output.subMode="";
 
         break;
 
     case 11: //Trolleybus. Electric buses that draw power from overhead wires using poles.
 
-        vystup.mainMode="";
-        vystup.subMode="";
+        output.mainMode="";
+        output.subMode="";
 
-        vystup.mainMode="BusSubmode";
+        output.mainMode="BusSubmode";
         if(routeIsRegional)
         {
-            vystup.subMode="regionalBus";
+            output.subMode="regionalBus";
         }
         else
         {
-            vystup.subMode="localBus";
+            output.subMode="localBus";
         }
 
         break;
@@ -116,15 +113,15 @@ Prestup PrestupGolemio::toPrestup()
 
     case 12: //Monorail. Railway in which the track consists of a single rail or a beam.
 
-        vystup.mainMode="";
-        vystup.subMode="";
+        output.mainMode="";
+        output.subMode="";
 
         break;
 
 
     default:
-        vystup.mainMode="unknown";
-        vystup.subMode="unknown";
+        output.mainMode="unknown";
+        output.subMode="unknown";
         break;
 
 
@@ -148,7 +145,7 @@ Prestup PrestupGolemio::toPrestup()
     //   bool tripIsCanceled=false;
 
     //   bool tripIsAtStop=false;
-    return vystup;
+    return output;
 
 }
 
