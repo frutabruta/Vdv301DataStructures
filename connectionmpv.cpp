@@ -220,33 +220,33 @@ bool ConnectionMPV::compareConnectionMPV(const ConnectionMPV &d1, const Connecti
 
 QString ConnectionMPV::dumpConnection()
 {
-    QString vystup;
-    vystup=vystup+"prestup: "+this->alias+" "+this->smer+" "+this->odj.toString()+" "+QString::number(this->zpoz)+" "+this->stan;
-    return vystup;
+    QString output;
+    output=output+"prestup: "+this->alias+" "+this->smer+" "+this->odj.toString()+" "+QString::number(this->zpoz)+" "+this->stan;
+    return output;
 }
 
 
-QVector<ConnectionMPV> ConnectionMPV::orderConnectionsByExpectedDeparture(QVector<ConnectionMPV> vstup)
+QVector<ConnectionMPV> ConnectionMPV::orderConnectionsByExpectedDeparture(QVector<ConnectionMPV> input)
 {
     qDebug()<<Q_FUNC_INFO;
 
 
-    foreach(ConnectionMPV aktPrestup,vstup)
+    foreach(ConnectionMPV aktPrestup,input)
     {
         qDebug()<<aktPrestup.dumpConnection();
     }
 
-    qDebug()<<"serazeno:";
+    qDebug()<<"ordered:";
 
-   std::sort(vstup.begin(),vstup.end(),ConnectionMPV::compareConnectionMPV );
+   std::sort(input.begin(),input.end(),ConnectionMPV::compareConnectionMPV );
 
-   foreach(ConnectionMPV aktPrestup,vstup)
+   foreach(ConnectionMPV currentConnectionMPV,input)
    {
-       qDebug()<<aktPrestup.dumpConnection();
+       qDebug()<<currentConnectionMPV.dumpConnection();
    }
 
 
-   return vstup;
+   return input;
 }
 
 
