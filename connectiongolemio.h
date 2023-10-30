@@ -36,7 +36,7 @@ public:
 
 
 
-    Connection toTransfer();
+    Connection toConnection();
 };
 
 #endif // CONNECTIONGOLEMIO_H

@@ -1,6 +1,7 @@
 # VDV301DataStructures
 Library of data storage classes for use with VDV301
-
+- 20231030
+    - function ConnectionGolemio::toTransfer() renamed to ConnectionGolemio::toConnection()
 - 20231002
     - translation of the source code variable and function names to English
     - rename to VDV301DataStructures

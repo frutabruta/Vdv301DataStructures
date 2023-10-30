@@ -5,7 +5,7 @@ ConnectionGolemio::ConnectionGolemio()
 
 }
 
-Connection ConnectionGolemio::toTransfer()
+Connection ConnectionGolemio::toConnection()
 {
     qDebug()<<Q_FUNC_INFO;
     Connection output;
