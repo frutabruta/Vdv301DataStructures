@@ -26,8 +26,8 @@ public:
     QString doorState="AllDoorsClosed";
     QString locationState="AtStop";
     QString routeDeviation="onroute";
-    QString vehicleSubMode="BusSubmode";
-    QString vehicleMode="regionalBus";
+    QString vehicleSubMode="regionalBus";
+    QString vehicleMode="BusSubmode";
     QString razziaState="norazzia";
     bool isVehicleStopRequested=false;
     bool showConnections=false;

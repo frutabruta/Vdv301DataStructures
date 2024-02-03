@@ -1,5 +1,8 @@
 # VDV301DataStructures
 Library of data storage classes for use with VDV301
+- 20240203
+    - VehicleState
+        - default values for vehicleSubMode and vehicleMode swaped
 - 20231030
     - function ConnectionGolemio::toTransfer() renamed to ConnectionGolemio::toConnection()
 - 20231002
