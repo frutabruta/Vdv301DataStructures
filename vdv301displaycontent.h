@@ -9,9 +9,11 @@
 
 enum DisplayContentClass
 {
+    DisplayContentUndefined,
     DisplayContentFront,
     DisplayContentSide,
     DisplayContentRear,
+    DisplayContentInner,
     DisplayContentLcd
 };
 
@@ -35,6 +37,7 @@ public:
     int duration=2; // type="IBIS-IP.duration" minOccurs="0" , used for duration of displayContent, Time-Value, which defines the part of the Periodtime in which this Sign-Information should be shown
 
 
+    static DisplayContentClass qStringToDisplayContentClass(QString input);
 };
 
 #endif // VDV301DISPLAYCONTENT_H

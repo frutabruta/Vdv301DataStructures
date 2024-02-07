@@ -1,5 +1,8 @@
 # VDV301DataStructures
 Library of data storage classes for use with VDV301
+- 20240207
+    - new function Vdv301DisplayContent::qStringToDisplayContentClass
+    - new class Vdv301Trip
 - 20240203
     - VehicleState
         - default values for vehicleSubMode and vehicleMode swaped
