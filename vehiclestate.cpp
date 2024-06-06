@@ -1,8 +1,7 @@
 #include "vehiclestate.h"
-#include<iostream>
 #include <QDebug>
-using namespace std;
-VehicleState::VehicleState(QWidget *parent)
+
+VehicleState::VehicleState()
 {
     qDebug()<<Q_FUNC_INFO;
     reset();

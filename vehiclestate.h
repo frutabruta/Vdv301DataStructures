@@ -1,9 +1,8 @@
-#ifndef BLABLA_H
-#define BLABLA_H
+#ifndef VEHICLESTATE_H
+#define VEHICLESTATE_H
 
-#include <QMainWindow>
+
 #include <QObject>
-#include <QWidget>
 #include <QDate>
 #include "line.h"
 #include "vehiclerun.h"
@@ -14,7 +13,7 @@ class VehicleState
 
 public:
 
-    explicit VehicleState(QWidget *parent = nullptr);
+    explicit VehicleState();
 
     // instances
     AdditionalAnnoucement currentSpecialAnnoucement;
@@ -44,7 +43,7 @@ public:
 
 
     //functions
-     int reset();
+    int reset();
     int countCurrentTripStops();
     Trip getCurrentTrip();
 
@@ -56,4 +55,4 @@ signals:
 public slots:
 };
 
-#endif // BLABLA_H
+#endif // VEHICLESTATE_H
