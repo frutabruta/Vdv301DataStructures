@@ -21,6 +21,7 @@ public:
     QString ids="";
     QString StopName="";
     int DestinationCis=0;
+    QString ArrivalTime="";
     QString DepartureTime="";
     QString NameFront="";
     QString NameFront2="";

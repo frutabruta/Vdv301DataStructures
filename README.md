@@ -1,7 +1,9 @@
 # VDV301DataStructures
 Library of data storage classes for use with VDV301
 
-
+- 20240617
+    - StopPoint
+        - added ArrivalTime
 - 20240606
     - VehicleState
         - fixed preprocessor header
