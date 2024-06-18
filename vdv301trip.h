@@ -3,7 +3,8 @@
 
 #include <QObject>
 #include "vdv301stoppoint.h"
-#include"vdv301internationaltext.h"
+#include "vdv301internationaltext.h"
+#include "vdv301enumerations.h"
 
 //defined in https://github.com/VDVde/VDV301/blob/master/IBIS-IP_common_V2.3.xsd
 
@@ -13,7 +14,7 @@ public:
     Vdv301Trip();
     QString tripRef=""; //type="IBIS-IP.NMTOKEN
     QVector<Vdv301StopPoint> stopPointList; //  type="StopSequenceStructure" ; List of StopPoints; with additional information
-    QString locationState=""; //  type="LocationStateEnumeration", minOccurs="0", Information of the location state
+    Vdv301Enumerations::LocationStateEnumeration locationState=Vdv301Enumerations::LocationStateAtStop; //  type="LocationStateEnumeration", minOccurs="0", Information of the location state
     /*
 <xs:enumeration value="AfterStop"/>
             <xs:enumeration value="AtStop"/>

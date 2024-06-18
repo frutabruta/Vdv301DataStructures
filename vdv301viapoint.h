@@ -7,7 +7,8 @@ class Vdv301ViaPoint
 {
 public:
     Vdv301ViaPoint();
-    Vdv301InternationalText viaPointRef;
+    QString viaPointRef;
+    QVector<Vdv301InternationalText> placeNameList;
 
 };
 

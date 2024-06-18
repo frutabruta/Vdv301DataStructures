@@ -3,6 +3,7 @@
 
 #include <QObject>
 #include "vdv301displaycontent.h"
+#include "vdv301connection.h"
 // definded in https://github.com/VDVde/VDV301/blob/master/IBIS-IP_common_V2.3.xsd
 class Vdv301StopPoint
 {
@@ -23,6 +24,7 @@ public:
     // RecordedArrivalTime not implemented
     // DistanceToNextStop not implemented
     // Connection will be implemented
+    QVector<Vdv301Connection> connectionList;
     QStringList fareZoneList; // type="IBIS-IP.NMTOKEN" minOccurs="0" maxOccurs="unbounded"
 
 };

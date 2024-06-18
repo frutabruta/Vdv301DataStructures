@@ -5,6 +5,7 @@
 #include <QDebug>
 
 #include "line.h"
+#include "vdv301connection.h"
 //#include "transfergolemio.h"
 
 
@@ -32,6 +33,7 @@ public:
 
     static  bool compareConnections(const Connection &d1, const Connection &d2);
     static  QVector<Connection> orderConnectionsByExpectedDeparture(QVector<Connection> vstup);
+    Vdv301Connection toVdv301Connection();
 };
 
 #endif // CONNECTION_H

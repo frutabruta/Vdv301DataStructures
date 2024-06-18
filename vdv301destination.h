@@ -9,7 +9,7 @@ class Vdv301Destination
 {
 public:
     Vdv301Destination();
-    QString DestinationRef=""; //type="IBIS-IP.NMTOKEN" , Reference to the destination-information in the schedule-data
+    QString destinationRef=""; //type="IBIS-IP.NMTOKEN" , Reference to the destination-information in the schedule-data
     QVector<Vdv301InternationalText> destinationNameList; // type="InternationalTextType" minOccurs="0" maxOccurs="unbounded", Text of the destination
     QVector<Vdv301InternationalText> destinationShortNameList; // type="InternationalTextType" minOccurs="0" maxOccurs="unbounded", Shorttext of the destination if there is limited space
 

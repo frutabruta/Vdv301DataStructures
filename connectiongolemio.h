@@ -3,6 +3,7 @@
 #include <QDateTime>
 #include <QDebug>
 
+#include "vdv301connection.h"
 #include "connection.h"
 
 //this class stores connections obtained from public Golemio API: https://api.golemio.cz/v2/pid/docs/openapi/
@@ -33,10 +34,11 @@ public:
     bool tripIsCanceled=false;
     bool tripIsWheelchairAccessible=false;
     bool tripIsAtStop=false;
-
-
-
+    
+    
+    
     Connection toConnection();
+    Vdv301Connection toVdv301Connection();
 };
 
 #endif // CONNECTIONGOLEMIO_H
