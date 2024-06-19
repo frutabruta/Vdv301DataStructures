@@ -2,6 +2,10 @@
 Library of data storage classes for use with VDV301
 
 - 20240619
+    - new function Vdv301Enumerations::RouteDeviationEnumerationToQString
+    - routeDeviation changed from QString to Vdv301Enumerations::RouteDeviationEnumeration
+
+- 20240619
     - Vdv301Enumerations::LocationStateEnumerationFromText renamed to Vdv301Enumerations::LocationStateEnumerationFromQString
     - new function  Vdv301Enumerations::LocationStateEnumerationToQString
     - VehicleState

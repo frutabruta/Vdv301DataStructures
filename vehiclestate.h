@@ -24,9 +24,9 @@ public:
 
     //variables
     QString doorState="AllDoorsClosed";
-  //  QString locationState="AtStop";
+    //  QString locationState="AtStop";
     Vdv301Enumerations::LocationStateEnumeration locationState=Vdv301Enumerations::LocationStateAtStop;
-    QString routeDeviation="onroute";
+    Vdv301Enumerations::RouteDeviationEnumeration routeDeviation=Vdv301Enumerations::RouteDeviationOnroute;
     QString vehicleSubMode="regionalBus";
     QString vehicleMode="BusSubmode";
     QString razziaState="norazzia";

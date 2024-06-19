@@ -55,6 +55,7 @@ public:
 
     static Vdv301Enumerations::LocationStateEnumeration LocationStateEnumerationFromQString(QString text);
     static QString LocationStateEnumerationToQString(Vdv301Enumerations::LocationStateEnumeration input);
+    static QString RouteDeviationEnumerationToQString(Vdv301Enumerations::RouteDeviationEnumeration input);
 };
 
 #endif // VDV301ENUMERATIONS_H

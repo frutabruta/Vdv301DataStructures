@@ -57,3 +57,22 @@ QString Vdv301Enumerations::LocationStateEnumerationToQString(Vdv301Enumerations
     }
     return "";
 }
+
+QString Vdv301Enumerations::RouteDeviationEnumerationToQString(Vdv301Enumerations::RouteDeviationEnumeration input)
+{
+    switch(input)
+    {
+    case RouteDeviationOnroute:
+        return "onroute";
+        break;
+    case RouteDeviationOffroute:
+        return "offroute";
+        break;
+    case RouteDeviationUnknown:
+        return "unknown";
+        break;
+    default:
+        return "unknown";
+        break;
+    }
+}
