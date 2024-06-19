@@ -7,6 +7,7 @@
 #include "line.h"
 #include "vehiclerun.h"
 #include "additionalannoucement.h"
+#include "vdv301enumerations.h"
 
 class VehicleState
 {
@@ -23,7 +24,8 @@ public:
 
     //variables
     QString doorState="AllDoorsClosed";
-    QString locationState="AtStop";
+  //  QString locationState="AtStop";
+    Vdv301Enumerations::LocationStateEnumeration locationState=Vdv301Enumerations::LocationStateAtStop;
     QString routeDeviation="onroute";
     QString vehicleSubMode="regionalBus";
     QString vehicleMode="BusSubmode";

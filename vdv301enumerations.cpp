@@ -8,7 +8,7 @@
 Vdv301Enumerations::Vdv301Enumerations() {}
 
 
-Vdv301Enumerations::LocationStateEnumeration Vdv301Enumerations::LocationStateEnumerationFromText(QString text)
+Vdv301Enumerations::LocationStateEnumeration Vdv301Enumerations::LocationStateEnumerationFromQString(QString text)
 {
     if(text=="AtStop")
     {
@@ -28,4 +28,32 @@ Vdv301Enumerations::LocationStateEnumeration Vdv301Enumerations::LocationStateEn
     }
     return LocationStateError;
 
+}
+
+
+QString Vdv301Enumerations::LocationStateEnumerationToQString(Vdv301Enumerations::LocationStateEnumeration input)
+{
+    switch(input)
+    {
+    case LocationStateAtStop:
+        return "AtStop";
+        break;
+    case LocationStateAfterStop:
+        return "AfterStop";
+        break;
+    case LocationStateBeforeStop:
+        return "BeforeStop";
+        break;
+    case LocationStateBetweenStop:
+        return "BetweenStop";
+        break;
+    case LocationStateError:
+        return "Error";
+        break;
+    default:
+        return "";
+        break;
+
+    }
+    return "";
 }

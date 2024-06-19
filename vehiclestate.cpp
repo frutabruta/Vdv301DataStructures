@@ -20,7 +20,7 @@ int VehicleState::reset()
     currentLine.lineNumber="";
     currentVehicleRun.reset();
     doorState="AllDoorsClosed";
-    locationState="AtStop";
+    locationState=Vdv301Enumerations::LocationStateAtStop;
     exitSide=0;
     vehicleNumber=1234;
     isDoorOpen=false;
