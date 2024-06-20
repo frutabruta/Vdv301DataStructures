@@ -1,6 +1,11 @@
 # VDV301DataStructures
 Library of data storage classes for use with VDV301
 
+- 20240620
+    - new function Vdv301Enumerations::DoorOpenStateEnumerationToQString
+    - VehicleState
+        - doorState changed from QString to Vdv301Enumerations
+
 - 20240619
     - new function Vdv301Enumerations::RouteDeviationEnumerationToQString
     - routeDeviation changed from QString to Vdv301Enumerations::RouteDeviationEnumeration

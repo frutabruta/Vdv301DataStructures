@@ -23,7 +23,7 @@ public:
     Trip currentTrip;
 
     //variables
-    QString doorState="AllDoorsClosed";
+    Vdv301Enumerations::DoorOpenStateEnumeration doorState=Vdv301Enumerations::DoorOpenStateAllDoorsClosed;
     //  QString locationState="AtStop";
     Vdv301Enumerations::LocationStateEnumeration locationState=Vdv301Enumerations::LocationStateAtStop;
     Vdv301Enumerations::RouteDeviationEnumeration routeDeviation=Vdv301Enumerations::RouteDeviationOnroute;

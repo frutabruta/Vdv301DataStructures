@@ -31,6 +31,8 @@ Vdv301Enumerations::LocationStateEnumeration Vdv301Enumerations::LocationStateEn
 }
 
 
+
+
 QString Vdv301Enumerations::LocationStateEnumerationToQString(Vdv301Enumerations::LocationStateEnumeration input)
 {
     switch(input)
@@ -57,6 +59,29 @@ QString Vdv301Enumerations::LocationStateEnumerationToQString(Vdv301Enumerations
     }
     return "";
 }
+
+QString Vdv301Enumerations::DoorOpenStateEnumerationToQString(Vdv301Enumerations::DoorOpenStateEnumeration input)
+{
+    switch(input)
+    {
+    case DoorOpenStateDoorsOpen:
+        return "DoorsOpen";
+        break;
+    case DoorOpenStateSingleDoorClosed:
+        return "SingleDoorClosed";
+        break;
+    case DoorOpenStateSingleDoorOpen:
+        return "SingleDoorOpen";
+        break;
+    case DoorOpenStateAllDoorsClosed:
+        return "AllDoorsClosed";
+        break;
+    default:
+        return "";
+        break;
+    }
+}
+
 
 QString Vdv301Enumerations::RouteDeviationEnumerationToQString(Vdv301Enumerations::RouteDeviationEnumeration input)
 {
