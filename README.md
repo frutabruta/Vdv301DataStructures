@@ -1,6 +1,8 @@
 # VDV301DataStructures
 Library of data storage classes for use with VDV301
 
+- 20240703
+    - new function Vdv301DisplayContent::displayContentClassEnumerationToQString
 - 20240620
     - new function Vdv301Enumerations::DoorOpenStateEnumerationToQString
     - VehicleState
