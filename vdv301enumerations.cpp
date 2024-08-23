@@ -30,6 +30,29 @@ Vdv301Enumerations::LocationStateEnumeration Vdv301Enumerations::LocationStateEn
 
 }
 
+Vdv301Enumerations::DoorOpenStateEnumeration Vdv301Enumerations::DoorOpenStateEnumerationFromQString(QString text)
+{
+    if(text=="DoorsOpen")
+    {
+        return DoorOpenStateDoorsOpen;
+    }
+    else if(text=="SingleDoorClosed")
+    {
+        return DoorOpenStateSingleDoorClosed;
+    }
+    else if(text=="SingleDoorOpen")
+    {
+        return DoorOpenStateSingleDoorOpen;
+    }
+    else if(text=="AllDoorsClosed")
+    {
+        return DoorOpenStateAllDoorsClosed;
+    }
+
+    return DoorOpenStateAllDoorsClosed; // create a default state!!!
+
+}
+
 
 
 
