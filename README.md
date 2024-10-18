@@ -1,5 +1,11 @@
 # VDV301DataStructures
 Library of data storage classes for use with VDV301
+- 20241018
+    - new derived classes
+        - Vdv301AllData2_3CZ1_0        
+        - Vdv301Trip2_3CZ1_0 
+        - Vdv301StopPoint2_3CZ1_0
+            - changed fareZoneList type from QStringlist to QVector<Vdv301InternationalText>
 - 20240823 
     - Vdv301Enumerations
         - new function DoorOpenStateEnumerationFromQString
