@@ -1,5 +1,10 @@
 # VDV301DataStructures
 Library of data storage classes for use with VDV301
+- 20241018_2
+    - new class Vdv301FareZoneChange2_3CZ1_0
+    - Vdv301Trip2_3CZ1_0
+        - added fareZoneChange variable
+
 - 20241018
     - new derived classes
         - Vdv301AllData2_3CZ1_0        
