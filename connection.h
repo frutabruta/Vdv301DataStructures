@@ -33,7 +33,7 @@ public:
 
     static  bool compareConnections(const Connection &d1, const Connection &d2);
     static  QVector<Connection> orderConnectionsByExpectedDeparture(QVector<Connection> vstup);
-    Vdv301Connection toVdv301Connection();
+    Vdv301Connection toVdv301Connection(DisplayContentClass displayClass);
 };
 
 #endif // CONNECTION_H

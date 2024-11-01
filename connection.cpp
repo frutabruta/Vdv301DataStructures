@@ -29,7 +29,7 @@ QString Connection::scheduledDepartureTimeQString()
 }
 
 
-Vdv301Connection Connection::toVdv301Connection()
+Vdv301Connection Connection::toVdv301Connection(DisplayContentClass displayClass)
 {
     qDebug()<<Q_FUNC_INFO;
     Vdv301Connection output;
@@ -39,7 +39,8 @@ Vdv301Connection Connection::toVdv301Connection()
 
     QString language="cs";
 
-
+    displayContent.displayContentType=displayClass;
+    displayContent.displayContentRef=displayContent.displayContentClassEnumerationToQString(displayContent.displayContentType);
 
     displayContent.lineInformation.lineNameList<<Vdv301InternationalText(this->line.lineName,language);
     displayContent.destination.destinationNameList<<Vdv301InternationalText(this->destinationName,language);

@@ -1,5 +1,29 @@
 # VDV301DataStructures
 Library of data storage classes for use with VDV301
+- 20241101
+    - Vdv301Connection
+        - new ConnectionTypeEnumeration
+        - new ConnectionStateEnumeration
+        - added variables
+            - stopRef
+            - connectionType
+            - connectionState
+        - removed unused includes
+    - Vdv301Destination
+        - default value of destinationRef se to "noRef"
+    - Vdv301Line
+        - default value of lineRef se to "noRef"
+    - Vdv301DisplayContent
+        - Vdv301DisplayContent::qStringToDisplayContentClass added option Inner
+    - Trip
+        - added function ref() to create number for *Ref elements (ROPID trip number)
+    - StopPoint:
+        - added function ref() to create number for *Ref elements (u_z)
+    - Line
+        - added function ref() to create number for *Ref elements (l.c)
+    - Connection
+        - added parameter to function Connection::toVdv301Connection(DisplayContentClass displayClass)
+
 - 20241018_2
     - new class Vdv301FareZoneChange2_3CZ1_0
     - Vdv301Trip2_3CZ1_0

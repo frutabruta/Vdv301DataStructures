@@ -19,8 +19,9 @@ public:
     QVector<StopPointDestination>  globalStopPointDestinationList ;
     bool continuesWithNextTrip=false;
     void reset();
-
+    QString ref();
     bool operator ==(const Trip &node) const;
+
 };
 
 #endif // TRIP_H

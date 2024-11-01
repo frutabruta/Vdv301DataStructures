@@ -59,6 +59,7 @@ public:
     QTime departureToQTime();
 
     static QTime secondsToQtime(QString vstup);
+    QString ref();
 };
 
 

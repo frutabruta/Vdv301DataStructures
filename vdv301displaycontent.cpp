@@ -21,6 +21,10 @@ DisplayContentClass Vdv301DisplayContent::qStringToDisplayContentClass(QString i
     {
         return DisplayContentRear;
     }
+    else if(input=="Inner")
+    {
+        return DisplayContentInner;
+    }
     else if(input=="Lcd")
     {
         return DisplayContentLcd;

@@ -21,3 +21,12 @@ bool Trip::operator==(const Trip &node) const
 return idRopid==node.idRopid && line.c==node.line.c;
 }
 
+
+QString Trip::ref()
+{
+    if(idRopid==0)
+    {
+        return "noRef";
+    }
+    return QString::number(idRopid);
+}

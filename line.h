@@ -22,6 +22,7 @@ public:
     bool isWheelchair=false;
     bool isSchool=false; //ignorování zastávek na znamení
     void reset();
+    QString ref();
 };
 
 #endif // LINE_H

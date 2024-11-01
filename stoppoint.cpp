@@ -24,3 +24,20 @@ QTime StopPoint::departureToQTime()
 {
     return secondsToQtime(DepartureTime);
 }
+/*!
+ * \brief StopPoint::ref
+ * returns composed value of stop for VDV301 StopPoint and DestinationRef etc. usage
+ * \return
+ */
+
+QString StopPoint::ref()
+{
+    if((idU==0)&&(idZ==0))
+    {
+        return "noRef";
+    }
+    QString uString=QString::number(idU);
+    QString zString=QString::number(idZ);
+
+    return uString+"_"+zString;
+}

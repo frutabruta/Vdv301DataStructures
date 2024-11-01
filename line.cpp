@@ -22,3 +22,13 @@ void Line::reset()
     isWheelchair=false;
     isSchool=false;
 }
+
+
+QString Line::ref()
+{
+    if(c==0)
+    {
+        return "noRef";
+    }
+    return QString::number(c);
+}
