@@ -6,6 +6,7 @@ class Vdv301StopPoint2_3CZ1_0 : public Vdv301StopPoint
 {
 public:
     Vdv301StopPoint2_3CZ1_0();
+    QString globalStopRef="noRef";// Reference to the stoppoint from global timetable system
     QVector<Vdv301InternationalText> fareZoneList;
 };
 
