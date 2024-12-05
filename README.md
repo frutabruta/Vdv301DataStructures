@@ -1,5 +1,8 @@
 # VDV301DataStructures
 Library of data storage classes for use with VDV301
+- 20241205_1437
+    - Vdv301Trip2_3CZ1_0
+        - runNumber description (formally changed in XSD to IBIS-IP.string)
 - 20241205_1304
     - Vdv301StopPoint2_3CZ1_0
         - added variable GlobalStopRef to store CISJR stop number
