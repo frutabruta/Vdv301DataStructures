@@ -1,5 +1,8 @@
 # VDV301DataStructures
 Library of data storage classes for use with VDV301
+- 20241206_1614
+    - new function Vdv301AllData::isVehicleOnFinalStop()
+    - new function Vdv301AllData2_3CZ1_0::isVehicleOnFinalStop()
 - 20241205_1437
     - Vdv301Trip2_3CZ1_0
         - runNumber description (formally changed in XSD to IBIS-IP.string)

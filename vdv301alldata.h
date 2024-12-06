@@ -19,6 +19,7 @@ public:
     Vdv301VehicleInformationGroup vehicleInformationGroup;
 
     QVector<Vdv301DisplayContent> globalDisplayContentList;
+    bool isVehicleOnFinalStop();
 };
 
 #endif // VDV301ALLDATA_H
