@@ -21,9 +21,9 @@ DisplayContentClass Vdv301DisplayContent::qStringToDisplayContentClass(QString i
     {
         return DisplayContentRear;
     }
-    else if(input=="Inner")
+    else if(input=="Interior")
     {
-        return DisplayContentInner;
+        return DisplayContentInterior;
     }
     else if(input=="Lcd")
     {
@@ -49,8 +49,8 @@ QString Vdv301DisplayContent::displayContentClassEnumerationToQString(DisplayCon
         return "Side";
     case DisplayContentRear:
         return "Rear";
-    case DisplayContentInner:
-        return "Inner";
+    case DisplayContentInterior:
+        return "Interior";
     case DisplayContentLcd:
         return "Lcd";
     default:

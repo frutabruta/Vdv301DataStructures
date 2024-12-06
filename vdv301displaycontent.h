@@ -13,7 +13,7 @@ enum DisplayContentClass
     DisplayContentFront,
     DisplayContentSide,
     DisplayContentRear,
-    DisplayContentInner,
+    DisplayContentInterior,
     DisplayContentLcd
 };
 
