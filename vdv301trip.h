@@ -5,6 +5,7 @@
 #include "vdv301stoppoint.h"
 #include "vdv301internationaltext.h"
 #include "vdv301enumerations.h"
+#include "vdv301additionalannouncement.h"
 
 //defined in https://github.com/VDVde/VDV301/blob/master/IBIS-IP_common_V2.3.xsd
 
@@ -25,6 +26,8 @@ public:
     int timetableDelay=0; //type="IBIS-IP.int" minOccurs="0",  Delay in seconds. Early times are shown as negative values.
     Vdv301InternationalText additionalTextMessage; // type="InternationalTextType" minOccurs="0",
     //AdditionalTextMessage 1-9 not implemented
+    QVector<Vdv301AdditionalAnnouncement> additionalAnnoucementList; //  type="AdditionalAnnouncementStructure" minOccurs="0" maxOccurs="unbounded" ot StopPointAnnouncements; additional announcements; e.g. of the operator or dispatcher
+
     //RouteDirection not implemented
     QString runNumber="";// type="IBIS-IP.int" minOccurs="0", The run number (Kurs-Nummer) the trip is operated
     //PatternNumber not implemented

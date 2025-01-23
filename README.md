@@ -1,5 +1,14 @@
 # VDV301DataStructures
 Library of data storage classes for use with VDV301
+
+- 20250123_1334
+        - new classes
+            - Vdv301AdditionalAnnouncement
+            - Vdv301AdditionalAnnouncement2_3CZ1_0
+        - VDV301Trip
+            - added variable  QVector<Vdv301AdditionalAnnouncement> additionalAnnoucementList;
+        - Vdv301Trip2_3CZ1_0
+            - added variable QVector <Vdv301AdditionalAnnouncement2_3CZ1_0> additionalAnnouncementList;
 - 20241206_1614
     - new function Vdv301AllData::isVehicleOnFinalStop()
     - new function Vdv301AllData2_3CZ1_0::isVehicleOnFinalStop()

@@ -4,6 +4,7 @@
 #include "vdv301trip.h"
 #include "vdv301stoppoint2_3cz1_0.h"
 #include "vdv301farezonechange2_3cz1_0.h"
+#include "vdv301additionalannouncement2_3cz1_0.h"
 class Vdv301Trip2_3CZ1_0 : public Vdv301Trip
 {
 public:
@@ -11,6 +12,7 @@ public:
     QVector<Vdv301StopPoint2_3CZ1_0> stopPointList;
     Vdv301FareZoneChange2_3CZ1_0 fareZoneChange;
     QString runNumber="";// type="IBIS-IP.string" minOccurs="0", The run number in format rootLine_order
+    QVector <Vdv301AdditionalAnnouncement2_3CZ1_0> additionalAnnouncementList;
 };
 
 #endif // VDV301TRIP2_3CZ1_0_H
