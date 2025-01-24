@@ -4,7 +4,7 @@
 #include <QString>
 #include <QVector>
 #include "vdv301internationaltext.h"
-enum AdditionalAnnoucementType
+enum AdditionalAnnouncementType
 {
     ImmediateInformation,
     PeriodicalInformation,
@@ -23,7 +23,7 @@ public:
     QVector<Vdv301InternationalText> announcementTextList; //" type="InternationalTextType" minOccurs="0" maxOccurs="unbounded"> Text of the Announcement
     QVector<Vdv301InternationalText> announcementTTSTextList; // type="InternationalTextType" minOccurs="0" maxOccurs="unbounded">
 
-    AdditionalAnnoucementType annoucementType=ImmediateInformation;
+    AdditionalAnnouncementType announcementType=ImmediateInformation;
 
     bool immediateInformation=true; // type="IBIS-IP.boolean" true, if the additional annoucement should be pronounced immiditaley
     int periodicalInformation=0; // type="IBIS-IP.duration" period in which the addional announcement should be played

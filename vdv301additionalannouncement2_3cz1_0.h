@@ -7,7 +7,7 @@ class Vdv301AdditionalAnnouncement2_3CZ1_0 : public Vdv301AdditionalAnnouncement
 {
 public:
     Vdv301AdditionalAnnouncement2_3CZ1_0();
-    QString annoucementHeader="";
+    QString announcementHeader="";
 };
 
 #endif // VDV301ADDITIONALANNOUNCEMENT2_3CZ1_0_H
