@@ -1,6 +1,7 @@
 # VDV301DataStructures
 Library of data storage classes for use with VDV301
-
+- 20250124_1359
+    - announcement variables spelling fix
 - 20250123_1334
         - new classes
             - Vdv301AdditionalAnnouncement
