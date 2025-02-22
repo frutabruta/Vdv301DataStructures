@@ -25,7 +25,16 @@ public:
 
     int timetableDelay=0; //type="IBIS-IP.int" minOccurs="0",  Delay in seconds. Early times are shown as negative values.
     Vdv301InternationalText additionalTextMessage; // type="InternationalTextType" minOccurs="0",
-    //AdditionalTextMessage 1-9 not implemented
+    Vdv301InternationalText additionalTextMessage1; // type="InternationalTextType" minOccurs="0",
+    Vdv301InternationalText additionalTextMessage2; // type="InternationalTextType" minOccurs="0",
+    Vdv301InternationalText additionalTextMessage3; // type="InternationalTextType" minOccurs="0",
+    Vdv301InternationalText additionalTextMessage4; // type="InternationalTextType" minOccurs="0",
+    Vdv301InternationalText additionalTextMessage5; // type="InternationalTextType" minOccurs="0",
+    Vdv301InternationalText additionalTextMessage6; // type="InternationalTextType" minOccurs="0",
+    Vdv301InternationalText additionalTextMessage7; // type="InternationalTextType" minOccurs="0",
+    Vdv301InternationalText additionalTextMessage8; // type="InternationalTextType" minOccurs="0",
+    Vdv301InternationalText additionalTextMessage9; // type="InternationalTextType" minOccurs="0",
+    
     QVector<Vdv301AdditionalAnnouncement> additionalAnnouncementList; //  type="AdditionalAnnouncementStructure" minOccurs="0" maxOccurs="unbounded" ot StopPointAnnouncements; additional announcements; e.g. of the operator or dispatcher
 
     //RouteDirection not implemented

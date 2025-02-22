@@ -1,5 +1,8 @@
 # VDV301DataStructures
 Library of data storage classes for use with VDV301
+- 20250222_1641
+    - Vdv301Trip
+        - added additionalTextMessage1-9
 - 20250124_1359
     - announcement variables spelling fix
 - 20250123_1334
