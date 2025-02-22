@@ -1,5 +1,8 @@
 # VDV301DataStructures
 Library of data storage classes for use with VDV301
+- 20250222_2125
+    - Vdv301Trip
+        - changed additionalTextMessage1-9 to additionalTextMessageList1-9
 - 20250222_1641
     - Vdv301Trip
         - added additionalTextMessage1-9
